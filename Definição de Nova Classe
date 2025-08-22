@@ -1,0 +1,18 @@
+public class Cliente {
+    String nome;
+    String email;
+    boolean membroPremium;
+
+    public void buscarLivroPorTitulo(String titulo) {
+        System.out.println("O cliente" + nome + "está buscando pelo livro" + titulo + "...");
+    }
+
+    public void cadastrarProgramaFidelidade() {
+        if (membroPremium) {
+            System.out.println("O cliente" + nome + "já é um membro Premium.");
+        } else {
+            this.membroPremium = true;
+            System.out.println("Parabéns," + nome + "! Você agora é um membro premium")
+        }
+    }
+}
