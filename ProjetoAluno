@@ -1,0 +1,56 @@
+public class Aluno {
+
+    String nome;
+    int matricula;
+    double notaAv1;
+    double notaAv2;
+
+    public double calcularMedia() {
+        return (this.notaAv1 + this.notaAv2) / 2;
+    }
+
+    public void verificarAprovacao() {
+        double mediaFinal = calcularMedia ();
+        System.out.println("A média final do aluno" + this.nome + "é:" + mediaFinal);
+        if (mediaFinal >= 7.0) {
+            System.out.println("Situação: APROVADO");
+        } else {
+            System.out.println("Situação: REPROVADO");
+        }
+    }
+
+    public void mostraDados () {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Matrícula: " + this.matricula);
+        System.out.println("Nota AV1:" + this.notaAv1);
+        System.out.println("Nota AV1: " + this.notaAv2);
+    }
+}
+public class ProjetoAluno {
+    public static void main (String [] args) {
+
+        Aluno aluno1 = new Aluno ();
+        aluno1.nome = "Joana Silva";
+        aluno1.matricula = 2024001;
+        aluno1.notaAv1 = 8,5;
+        aluno1.notaAv2 = 9.0;
+
+        Aluno aluno2 = new Aluno ();
+        aluno2.nome = "Pedro Costa";
+        aluno2.matricula = 2024002; 
+        aluno2.notaAv1 = 5.0;
+        aluno2.notaAv2 = 6.5;
+
+        System.out.println("--- Atualizando a nota do Aluno 2 ---");
+        aluno2.notaAv2 = 7.5;
+        System.out.println("Nota atualizada. \n");
+
+        System.out.println("--- Dados Atualizados do Aluno 2 ---";)
+        aluno2.mostraDados();
+        System.out.println("\n--- Verificando aprovação ---")
+
+        aluno1.verificarAprovacao():
+        System.out.println();
+        aluno2.verificarAprovacao();
+    }
+}
