@@ -1,0 +1,57 @@
+public class Livro{
+
+    Strin titulo:
+    int numeroPaginas;
+    int anoPublicacao;
+    double preco;
+    double valorFrete = 12.50;
+
+    void cadastra() {
+        System.out.println("Cadastrar no banco de dados...");
+    }
+
+    void vender() {
+        System.out.println("Vendendo livro por R$ %.2f\n",preco);
+    }
+
+    String trocar(){
+        return "Livro trocado!";
+    }
+
+    double calcFrete(String cep) {
+        System.out.println("Calculando frete para o CEP" + cep);
+    }
+}
+
+public class ProjetoLivraria{
+    public static void main(String[] args) {
+        Livro livro1 = new Livro ();
+        Livro livro2 = new Livro ();
+
+        livro1.titulo = "Harry Potter e a Pedra Filosofal";
+        livro1.numeroPaginas = 304;
+        livro1.anoPublicacao = 1997;
+        livro1.preco = 25.90;
+
+        livro2.titulo = "O Senhor dos Anéis: A Sociedade do Anel";
+        livro2.numeroPaginas = 576;
+        livro2.anoPublicacao = 1954;
+        livro2.preco = 49.99;
+
+        System.out.println("--- Detalhes do Livro 1 ---");
+        System.out.println("Título: " + livro1.titulo);
+        System.out.println("Páginas: " + livro1.numeroPaginas);
+        System.out.println("Preço: R$" + livro1.preco);
+
+        System.out.println("\n--- Detalhes do Livro 2 ---");
+        System.out.println("Título: " + livro2.titulo);
+        System.out.println("Páginas: " + livro2.numeroPaginas);
+        System.out.println("Preço: R$" + livro2.preco); 
+
+        System.out.println("\n--- Ações ---");
+        livro1.vender();
+        double frete = livro1.calcFrete;
+        System.out.printf("Frete do Livro 1: R$ %.2f\n", frete);
+        System.out.println("Status do Livro 2: " + livro2.trocar)
+    }
+}
